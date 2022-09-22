@@ -57,24 +57,21 @@
 
 
 
-const nota = 60;
+const nota = 91;
 
 
 switch (nota) {
-    case "nota < 0 | nota > 100": console.log('Erro, nota incorreta!');
+    case  90: console.log('a');
         break;
-    case "nota <= 90": console.log('a');
+    case  80: console.log('b');
         break;
-    case "nota >= 80": console.log('b');
+    case  70: console.log('c');
         break;
-    case "nota >= 70": console.log('c');
+    case  60: console.log('d');
         break;
-    case "nota >= 60": console.log('d');
-        break;
-    case "nota >= 50": console.log('e');
+    case  50: console.log('e');
 
-    default: console.log('f')
-    break;
-    
+    default: console.log("f");
+        
+
 }
-
