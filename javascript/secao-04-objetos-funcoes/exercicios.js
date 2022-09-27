@@ -67,6 +67,27 @@ let leitor = {
     ],
 };
 
-console.log(
-    'O livro favarito de ' + leitor.nome, leitor.sobrenome + 'se chama "' +leitor.livrosFavoritos[0].titulo + '"'
-);
+// console.log(
+//     'O livro favarito de ' + leitor.nome, leitor.sobrenome + 'se chama "' + leitor.livrosFavoritos[0].titulo + '"'
+// );
+
+// Parte 2
+
+leitor.livrosFavoritos.push({
+    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+    autor: 'JK Rowling',
+    editora: 'Rocco',
+  }
+)
+
+// Parte 3
+
+// Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: “Julia tem 
+// <quantidade> livros favoritos”, onde “<quantidade>” é um número gerado automaticamente pelo seu código.
+
+for (let key in leitor){
+    console.log('Julia tem ' + leitor.livrosFavoritos.length + ' livros Favoritos');;
+
+
+}
+
