@@ -5,7 +5,17 @@ window.onload = function(){
         document.body.style.backgroundColor = selected.value;
     
     })
+
+
+    let imputfontSize = document.querySelector('input')
+    imputfontSize.addEventListener('change',function(){
+    let p = document.querySelector('p');
+        p.style.fontSize = `${imputfontSize.value}px`;
+        
+    })
+
 }
+
 
 // variaveis globais
 
