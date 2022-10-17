@@ -33,18 +33,27 @@
 //   Crie uma função que retorne um array em ordem crescente.
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-const sortOddsAndEvens = (array) => {
-    for (let index = 1; index < array.length; index+=1) {
-        for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
-            if (array[index] < array[secondIndex]) {
-                let position = array[index];
-                array[index] = array[secondIndex];
-                array[secondIndex] = position;
-            }            
-        }        
-    }
-    return array
-}
+// const sortOddsAndEvens = (array) => {
+//     for (let index = 1; index < array.length; index+=1) {
+//         for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//             if (array[index] < array[secondIndex]) {
+//                 let position = array[index];
+//                 array[index] = array[secondIndex];
+//                 array[secondIndex] = position;
+//             }            
+//         }        
+//     }
+//     return `Os números ${array} se encontram ordenados de forma crescente!`
+// }
    
 
-console.log(sortOddsAndEvens(oddsAndEvens));
+// console.log(sortOddsAndEvens(oddsAndEvens));
+
+const sortArrayBonus = (array) => {
+    const sortOddsAndEvens = array.sort((a, b) => a - b);
+    return sortOddsAndEvens;
+  };
+
+console.log(sortArrayBonus(oddsAndEvens));
+
+
