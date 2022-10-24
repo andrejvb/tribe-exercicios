@@ -13,3 +13,13 @@ const newEmployees = (callBack) => {
   }
 
 console.log(newEmployees(newEmployeeGenerator));
+
+const checknumber = (myNumber, loteryNumber) => myNumber === loteryNumber;
+
+const sortNumber = (myNumber, callBack) => {
+    const number = Math.floor((Math.random() * 5));
+    
+    return callBack(myNumber, number) ? 'Lucky day, you won!' : 'Try Again!'
+}
+
+console.log(sortNumber(4, checknumber));
