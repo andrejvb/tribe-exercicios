@@ -23,3 +23,23 @@ const sortNumber = (myNumber, callBack) => {
 }
 
 console.log(sortNumber(4, checknumber));
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checkAnswers = (right, student)=>{
+    if(right === student){return 1};
+    if(student === 'N.A'){return 0};
+    return -0.5;     
+};
+
+const countPoints = (rightAnswers, studentAnswers, callBack) =>{
+    let counter = 0;
+    for (let index = 0; index < rightAnswers.length; index+=1) {
+        const callBackReturn = callBack(rightAnswers[index], studentAnswers[index])
+        counter += callBackReturn        
+    }
+    return `Resultado Final: ${counter} pontos`
+}
+
+console.log(countPoints(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswers));
