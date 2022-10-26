@@ -66,3 +66,18 @@ const books = [
     return books.find(book => book.author.birthYear === 1947).author.name
   }
   console.log(authorBornIn1947());
+
+  // Crie um array com strings 
+  // no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
+const arrayBooks = (array) => books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
+
+console.log(arrayBooks(books));
+
+const nameAge = (array) => {
+  return array.map((book) => ({
+    author: book.author.name,
+    age: book.releaseYear - book.author.birthYear
+  }))
+}
+
+console.log(nameAge(books));
